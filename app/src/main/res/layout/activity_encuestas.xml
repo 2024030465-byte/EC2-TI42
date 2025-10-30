@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Encuestas">
+
+    <TextView
+        android:id="@+id/txtTitulo2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="22dp"
+        android:fontFamily="@font/cinzel_semibold"
+        android:text="CosmoFlix"
+        android:textAlignment="center"
+        android:textColor="#FFD700"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Indicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del cliente"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/txtCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/Indicacion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Con que frecuencia acudes al cine?"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/RespuestaEnc1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/Respuesta11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Una vez al mes"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Una vez cada semana"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mas de una vez a la semana"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Casi nunca"
+                    android:textColor="@color/white" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Indicacion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Califique la calidad de audio de las salas"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/RepuestaEnc2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/Respuesta21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Malo"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Regular"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bueno"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Excelente"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Indicacion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Califique la atención del personal antes, durante y después de la función."
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/RespuestaEnc3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/Respuesta31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Malo"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Regular"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Repuesta33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bueno"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Excelente"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Indicacion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Califique el nivel de higiene en baños y salas"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/RespuestaEnc4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/Respuesta41"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Malo"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta42"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Regular"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta43"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bueno"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta44"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Excelente"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Indicacion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Qué tipo de sala prefiere?"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/RespuestaEnc5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/Respuesta51"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3D"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta52"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sala Normal"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/Respuesta53"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Macro XE"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/BtnEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#128CA0"
+                android:text="Terminar Encuesta" />
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ED3124"
+                android:text="Regresar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="142dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginBottom="670dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
