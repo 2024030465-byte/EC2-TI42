@@ -24,8 +24,6 @@ class Encuestas : AppCompatActivity() {
             insets
         }
 
-
-        val txtCliente = findViewById<EditText>(R.id.txtCliente)
         val txtRespuesta1 = findViewById<RadioGroup>(R.id.RespuestaEnc1)
         val txtRespuesta2 = findViewById<RadioGroup>(R.id.RepuestaEnc2)
         val txtRespuesta3 = findViewById<RadioGroup>(R.id.RespuestaEnc3)
@@ -33,12 +31,12 @@ class Encuestas : AppCompatActivity() {
         val txtRespuesta5 = findViewById<RadioGroup>(R.id.RespuestaEnc5)
         val btnEnviar = findViewById<Button>(R.id.BtnEnviar)
         val btnRegresar = findViewById<Button>(R.id.btnRegresar)
+        var Encuestastotales=0
 
         btnEnviar.setOnClickListener {
             val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
             val bd = admin.writableDatabase
             val registro = ContentValues()
-            registro.put("nombre", txtCliente.text.toString())
             val seleccion1 = txtRespuesta1.checkedRadioButtonId
             val seleccion2 = txtRespuesta2.checkedRadioButtonId
             val seleccion3 = txtRespuesta3.checkedRadioButtonId
@@ -51,7 +49,7 @@ class Encuestas : AppCompatActivity() {
             val respuesta4 = findViewById<RadioButton>(seleccion4)
             val respuesta5 = findViewById<RadioButton>(seleccion5)
 
-            if (txtCliente.text.toString().isEmpty() || respuesta1 == null || respuesta2 == null || respuesta3 == null || respuesta4 == null || respuesta5 == null) {
+            if (respuesta1 == null || respuesta2 == null || respuesta3 == null || respuesta4 == null || respuesta5 == null) {
                 Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -61,10 +59,10 @@ class Encuestas : AppCompatActivity() {
             registro.put("respuesta3", respuesta3.text.toString())
             registro.put("respuesta4", respuesta4.text.toString())
             registro.put("respuesta5", respuesta5.text.toString())
-
+            Encuestastotales++
+            registro.put("EncuestasTotales", Encuestastotales)
             bd.insert("encuesta", null, registro)
             bd.close()
-            txtCliente.setText("")
             respuesta1.isChecked = false
             respuesta2.isChecked = false
             respuesta3.isChecked = false
